@@ -1,0 +1,25 @@
+
+body{
+background-image: url("https://images.unsplash.com/photo-1426604966848-d7adac402bff?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY5NTA3MzczMg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600");
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.container {
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+h1, p, h2, h3, pre {
+  color: black;
+}
+
+.titulo, .paragrafo1, .paragrafo2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
