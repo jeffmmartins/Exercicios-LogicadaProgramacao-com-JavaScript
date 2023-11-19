@@ -1,0 +1,47 @@
+body{
+  background-image: url(../imagens/tooth.png);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container{
+  border-radius: 20px;
+  background-color: gray;
+ opacity: 85%;
+ padding: 10px;
+}
+
+input {
+  background-color: black;
+  color: white;
+  border-radius: 1px;
+  
+}
+
+h1, h3, p {
+  
+  font-weight: bold;
+}
+
+pre{
+  font-size: 1.2em;
+}
+
+.font-azul{
+  color: blue;
+}
+
+.oculta{
+  display: none;
+}
+
+.exibe{
+  display: inline;
+}
+
+.italico{
+  font-style: italic;
+}
