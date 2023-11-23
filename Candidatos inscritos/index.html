@@ -1,0 +1,30 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <title>Programa Concurso</title>
+  <!--Programa que ler nome e número de acertos de candidatos inscritos em um concurso.
+  lista os dados da inclusão. ao clicar no botão Aprovados 2° Fase, programa deve exibir os candidatos 
+  aprovados, aos candidatos que obtiveram nota maior ou igual ao informado. Exibe os candidatos aprovados em ordem 
+  decrescente de numeros de acertos -->
+</head>
+<body>
+  <div class="container" >
+    <H1>Programa Concurso</H1>
+    <form action="">
+      <p>Nome:
+        <input type="text" id="inNome" placeholder="Digite o nome">
+      </p>
+      <p>Acertos:
+        <input type="text" id="inAcertos" placeholder="Digite o número de acertos ">
+        <input type="submit" value="Adicionar">
+      </p>
+      <button id="btListar" >Listar Todos</button>
+      <button id="btAprovados" >Aprovados 2° fase</button>
+    </form>
+    <pre></pre>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
