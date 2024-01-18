@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilo.css" type="text/css">
+  <title>Veterinária Avenida</title>
+  <!--Programa que le o preço da vacina e se o cliente possui convênio ou não 
+  caso cliente tenha convênio é aplicado o desconto que o cliente tem em seus respectvos 
+  convênios-->
+</head>
+<body>
+  <div class="container">
+    <h1>Veterinária Avenida</h1>
+    <form action="">
+      <p>Valor da vacina:
+      <input type="text" id="inValor" placeholder="Digite o Valor">
+      </p>
+      <p>Possui Convênio:
+        <input type="radio" name="plano" id="rbSim">Sim
+        <input type="radio" name="plano" id="rbNao" checked autofocus>Não
+      </p>
+      <p class="oculta" id="pConvenio">Convenio:
+      <select id="inConvenio">
+        <option value="Amigos">Amigos dos Animais</option>
+        <option value="Saude">Saúde Animal</option>
+      </select>
+    </p>
+      <button id="inCalcular">Calcular Desconto</button>
+    </form>
+    <h2></h2>
+    <script src="js/app.js"></script>
+  </div>
+</body>
+</html>
