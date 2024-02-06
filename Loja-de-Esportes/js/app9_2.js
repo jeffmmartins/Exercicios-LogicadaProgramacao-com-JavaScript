@@ -10,8 +10,6 @@ if(!localStorage.getItem("clube")){
   let tamanho = informacoes.length
   alert(`Que bom que você voltou está é sua visita de númmero ${tamanho} ao nosso site `)
 }
-  
-
 
 
 const trocarClube = () => {
