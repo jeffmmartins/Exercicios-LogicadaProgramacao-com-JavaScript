@@ -2,9 +2,21 @@ const imClube = document.querySelector('#imgClube')
 const dvTitulo = document.querySelector('#divTitulo')
 const inRadios = document.querySelectorAll("input") // captura as tags do input da página
 
+
+if(!localStorage.getItem("clube")){
+  alert("Muito bem Vindo! Esta é a sua primeira visita ao nosso site")
+}else if (localStorage.getItem("clube")){
+  const informacoes = localStorage.getItem("clube").split(";")
+  let tamanho = informacoes.length
+  alert(`Que bom que você voltou está é sua visita de númmero ${tamanho} ao nosso site `)
+}
+  
+
+
+
 const trocarClube = () => {
   const clubes = ["Brasil", "Pelotas", "Farroupilha"]  // vetor com lista de clubes
-
+ 
   let selecao
   //percorrer os Inradios pra verificar qual foi selecionado
   for (let i = 0; i < inRadios.length; i++){
@@ -47,5 +59,5 @@ const verificarClube = () => {
   }
 }
 
-// ao carregar a pagina, verifica se cliete ja selecionou clube anteriormente
+// ao carregar a pagina, verifica se cliente ja selecionou clube anteriormente
 window.addEventListener('load', verificarClube)
