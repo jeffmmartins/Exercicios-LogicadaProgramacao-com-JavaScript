@@ -24,6 +24,7 @@ frm.inAdicionar.addEventListener("click", (e) => {
   }
 
   resp.innerText = "Produtos Adicionados:\n" + "-".repeat(20) + "\n" + resultado
+  inProduto.focus()
 })
 
 //remove o conteudo da lista
