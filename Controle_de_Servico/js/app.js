@@ -1,28 +1,31 @@
 const frm = document.querySelector('form')
+
 const resultado1 = document.querySelector('h2')
 const resultado2 = document.querySelector('h3')
 
 frm.inAdicionar.addEventListener('click', (e) => {
   e.preventDefault()
+
   const servico = frm.inServico.value
-  if (servico == "") {
+  
+  if (!frm.inServico.value) {
     alert('favor preencher o campo corretamente')
+    return
   }
 
-  let descricaoDeServico = ""
-  if (localStorage.getItem('servicoNome')) {
-    const descricaoServico = localStorage.getItem('servicoNome') + ";" + servico
-    localStorage.setItem('servicoNome', descricaoServico) 
-    descricaoDeServico = descricaoServico.split(";")
+  if (localStorage.getItem("nomeServico")) {
+    const descricao = localStorage.getItem("nomeServico") + ";" + servico
+    localStorage.setItem("nomeServico", descricao)
+  }else{
+    localStorage.setItem("nomeServico",servico)
   }
+   
   
-  console.log(descricaoDeServico)
+    
   
-  const mostrarServico = [descricaoDeServico.shift()]
-  console.log(mostrarServico)
   /*
-  resultado1.innerText = `Serviços Pendentes: ${descricao.length - mostrarServico.length}`
-  resultado2.innerText = `Serviço em Execução: ${mostrarServico}`
+  const descricao = localStorage.getItem("nomeServico") + ";" + servico
+  localStorage.setItem("nomeServico", descricao)
   */
 })
 
