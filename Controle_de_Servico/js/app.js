@@ -7,7 +7,7 @@ const resultado3 = document.querySelector('h4')
 frm.inAdicionar.addEventListener("click", (e) => {
   e.preventDefault()
 
-  const servico = frm.inServico.value
+  const servico = frm.inServico.value.toString()
   
   if (!frm.inServico.value) {
     alert('favor preencher o campo corretamente')
@@ -15,15 +15,15 @@ frm.inAdicionar.addEventListener("click", (e) => {
   }
 
   if (localStorage.getItem("nomeServico")) {
-    const descricao = localStorage.getItem("nomeServico") + ";" + servico
+    const descricao = localStorage.getItem("nomeServico") + "," + servico
     localStorage.setItem("nomeServico", descricao)
   }else{
     localStorage.setItem("nomeServico",servico)
   }
-  /*
-  const descricao = localStorage.getItem("nomeServico") + ";" + servico
-  localStorage.setItem("nomeServico", descricao)
-  */
+  mostrarServico()
+  frm.reset()
+  frm.inServico.focus()
+  
 })
 
 frm.inExecutar.addEventListener("click", (e) => {
@@ -31,7 +31,7 @@ frm.inExecutar.addEventListener("click", (e) => {
   
   
   
-  const informacoes = localStorage.getItem("nomeServico").split(";")
+  const informacoes = localStorage.getItem("nomeServico").split(",")
   const primeiroServico = informacoes.shift()
   localStorage.setItem("nomeServico", informacoes)
   
@@ -44,4 +44,14 @@ frm.inExecutar.addEventListener("click", (e) => {
 
   
 })
+
+const mostrarServico = () =>{
+  
+  if(localStorage.getItem("nomeServico")){
+  const informacoesDeSevicos = localStorage.getItem("nomeServico").split(",")
+  resultado1.innerText = `Serviços Pendentes: ${informacoesDeSevicos.length}`
+} 
+}
+
+window.addEventListener('load', mostrarServico)
 
