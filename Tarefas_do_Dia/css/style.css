@@ -1,0 +1,11 @@
+.tarefa-selecionada {
+  color: red;
+  font-style: italic;
+}
+.tarefa-normal {
+  color: black;
+}
+
+#btnRadio {
+  margin-left: 20px;
+}
