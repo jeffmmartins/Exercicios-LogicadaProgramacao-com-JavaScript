@@ -68,3 +68,19 @@ frm.btRetirar.addEventListener("click", () => {
   }
 })
 
+window.addEventListener("load", () => {
+  //verifica se ha tarefas salvas no navegador do usuario
+  if(localStorage.getItem("tarefasDia")) {
+    // cria um vetor com uma lista de tarefas (separadas por ;)
+    const dados = localStorage.getItem("tarefasDia").split(";")
+  
+    //percorre os dados armazenados em LocalStorage
+    dados.forEach(dado => {
+      const h5  = document.createElement("h5")                      // cria um elemento h5
+      const texto = document.createTextNode(dado)                   // cria um texto
+      h5.appendChild(texto)                                         // define que o texto será filho do hh5
+      dvQuadro.appendChild(h5)                                      // define que o h5 será filho de dvQuadros
+    })
+  }
+})
+
